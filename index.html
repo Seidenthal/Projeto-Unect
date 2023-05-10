@@ -6,11 +6,12 @@
   <title>Home</title>
   <link rel="stylesheet" href="style.css">
   <link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
+
 </head>
 
 <body>
   <header class="header">
-    <a href="/index.html"><img src="/logobranca.svg" alt="Logo" class="logo"></a>
+    <a href="/index.html"><img src="/img/logobranca.svg" alt="Logo" class="logo"></a>
     <div>
       <h1>uTask 3.0</h1>
     </div>
@@ -29,7 +30,7 @@
 
   <div class="frase-do-dia">
     <div class="frase-do-dia-itens">
-      <img src="/tips_and_updates.svg" alt="Lampada" class="imglamapada">
+      <img src="/img/tips_and_updates.svg" alt="Lampada" class="imglamapada">
       <h3>Frase do dia</h3>
       <p class="frase-frase">Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você quer conquistar o mundo, acredite em você porque Deus já te deu tudo o que você precisa para você vencer.</p>
     </div>
@@ -37,14 +38,27 @@
 
   <section class="Tasks">
     <div class="Titulos">
-      <!-- Display flex -->
       <div class="add">
-        <!-- Display grid -->
         <div class="afazermais">
           <h3>A fazer</h3>
-          <img class="mais" src="add.svg" alt="">
+          <img id="addtask" class="mais" src="/img/add.png" alt="">
         </div>
-        <div id="fazer" class="tasksdisp"></div>
+        <div id="fazer" class="tasksdisp">
+          <div class="tarefa">
+            <div class="tarefacima">
+              <h4 class="nometarefa">Pagar a conta de luz</h4>
+              <img src="/img/more_vert.svg" alt="">
+            </div>
+            <div class="tarefabaixo">
+              <div class="descricao">
+                <h5>Ler descrição</h5>
+                <img src="/img/expand_more.svg" alt="">
+              </div>
+              <button class="botaodelete"> <img src="/img/delete_outline.svg" alt="Lixeira vermelha"> Excluir</button>
+            </div>
+
+          </div>
+        </div>
       </div>
 
       <div class="and">
@@ -60,6 +74,25 @@
       </div>
     </div>
   </section>
+
+  <section id="fundomodal" class="">
+    <div id="modal">
+      <div class="modaltitulo">
+        <h3> Nova Task</h3>
+        <img id="fecharmodal" src="/img/fechar.png" alt="">
+      </div>
+      <div class="modalform">
+        <form action="" method="get">
+          <label for="get-nome">Título</label>
+          <input type="text" name="titulo" id="get-nome">
+          <label for="get-desc">Descrição</label>
+          <input type="text" name="desc" id="get-desc">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
