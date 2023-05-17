@@ -6,6 +6,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="style.css">
   <link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -30,7 +33,7 @@
 
   <div class="frase-do-dia">
     <div class="frase-do-dia-itens">
-      <img src="/img/tips_and_updates.svg" alt="Lampada" class="imglamapada">
+      <img src="/img/amarelo.png" alt="Lampada" class="imglamapada">
       <h3>Frase do dia</h3>
       <p class="frase-frase">Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você quer conquistar o mundo, acredite em você porque Deus já te deu tudo o que você precisa para você vencer.</p>
     </div>
@@ -78,21 +81,27 @@
   <section id="fundomodal" class="">
     <div id="modal">
       <div class="modaltitulo">
-        <h3> Nova Task</h3>
+        <img id="titulonovatask" src="/img/novatask.png" alt="">
         <img id="fecharmodal" src="/img/fechar.png" alt="">
       </div>
       <div class="modalform">
         <form action="" method="get">
+          <br>
           <label for="get-nome">Título</label>
-          <input type="text" name="titulo" id="get-nome">
+          <br>
+          <input type="text" name="titulo" id="get-nome" required>
+          <br> <br>
           <label for="get-desc">Descrição</label>
-          <input type="text" name="desc" id="get-desc">
+          <br>
+          <textarea name="desc" id="get-desc" required cols="30" rows="10"></textarea>
+          <br><br><br>
+          <input type="submit" value="Criar Task" name="submit" id="submit">
         </form>
       </div>
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
