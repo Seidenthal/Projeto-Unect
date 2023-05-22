@@ -1,2 +1,2 @@
 # Projeto-Unect
-Desenvolvimento de um site e uma aplicação mobile do projeto de treinee da Uncet Jr.
+Desenvolvimento de um site do projeto de treinee da Uncet Jr.
