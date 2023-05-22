@@ -2,106 +2,100 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Home</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>uTask 3.0</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.svg" />
   <link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
-  <header class="header">
-    <a href="/index.html"><img src="/img/logobranca.svg" alt="Logo" class="logo"></a>
-    <div>
-      <h1>uTask 3.0</h1>
-    </div>
+  <section class="header">
+    <img src="/images/logo.png" alt="" />
+    <h1>uTask 3.0</h1>
     <div>
       <label class="switch">
         <input type="checkbox">
         <span class="slider round"></span>
       </label>
     </div>
-  </header>
+  </section>
 
   <footer>
     <h2>© Processo de Trainee <span class="semibold"> Uncet Jr.</span> 2023.1</h2>
-    <h2>Feito com <span class="ec ec-purple-heart"></span> Daniel Seidenthal </h2>
+    <h2>Feito com <span class="ec ec-purple-heart"></span> por <span class="semibold">Daniel Seidenthal</span> </h2>
   </footer>
 
-  <div class="frase-do-dia">
-    <div class="frase-do-dia-itens">
-      <img src="/img/amarelo.png" alt="Lampada" class="imglamapada">
-      <h3>Frase do dia</h3>
-      <p class="frase-frase">Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você quer conquistar o mundo, acredite em você porque Deus já te deu tudo o que você precisa para você vencer.</p>
-    </div>
-  </div>
-
-  <section class="Tasks">
-    <div class="Titulos">
-      <div class="add">
-        <div class="afazermais">
-          <h3>A fazer</h3>
-          <img id="addtask" class="mais" src="/img/add.png" alt="">
-        </div>
-        <div id="fazer" class="tasksdisp">
-          <div class="tarefa">
-            <div class="tarefacima">
-              <h4 class="nometarefa">Pagar a conta de luz</h4>
-              <img src="/img/more_vert.svg" alt="">
-            </div>
-            <div class="tarefabaixo">
-              <div class="descricao">
-                <h5>Ler descrição</h5>
-                <img src="/img/expand_more.svg" alt="">
-              </div>
-              <button class="botaodelete"> <img src="/img/delete_outline.svg" alt="Lixeira vermelha"> Excluir</button>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="and">
-        <!-- Display grid -->
-        <h3>Em andamento</h3>
-        <div id="andamento" class="tasksdisp"></div>
-      </div>
-
-      <div class="fei">
-        <!-- Display grid -->
-        <h3>Feito</h3>
-        <div id="feito" class="tasksdisp"></div>
-      </div>
+  <section id="btnfrase" class="frasedodia">
+    <img src="images/Lampada.png" alt="" />
+    <div class="title">
+      <h1>Frase do dia</h1>
+      <p id="frase-paragrafo">
+      <p id="erro"></p>
+      </p>
     </div>
   </section>
 
-  <section id="fundomodal" class="">
-    <div id="modal">
-      <div class="modaltitulo">
-        <img id="titulonovatask" src="/img/novatask.png" alt="">
-        <img id="fecharmodal" src="/img/fechar.png" alt="">
+  <section class="janelafrase">
+    <div class="background background-frase"></div>
+    <div class="frasebox">
+      <div>
+        <img src="img/Lampada.png" alt="" />
+        <h1>Frase do dia</h1>
+        <img class="frasefechar" src="/images/BotaoFechar.png" alt="" />
       </div>
-      <div class="modalform">
-        <form action="" method="get">
-          <br>
-          <label for="get-nome">Título</label>
-          <br>
-          <input type="text" name="titulo" id="get-nome" required>
-          <br> <br>
-          <label for="get-desc">Descrição</label>
-          <br>
-          <textarea name="desc" id="get-desc" required cols="30" rows="10"></textarea>
-          <br><br><br>
-          <input type="submit" value="Criar Task" name="submit" id="submit">
-        </form>
-      </div>
+      <p id="frase-paragrafo">
+      <p id="erro"></p>
+      </p>
     </div>
   </section>
 
-  <script src="./script.js"></script>
+  <section class="novatask" id="janelaadd">
+    <div class="background background-nova"></div>
+    <form class="criartask">
+      <h1 class="titulo">Nova Task</h1>
+      <img id="btnfechar" src="/images/BotaoFechar.png" alt="" />
+      <h1 class="titulotask">Título *</h1>
+      <input id="input" type="text" required />
+      <h1>Descrição</h1>
+      <textarea id="inputdesc" class="descricao"></textarea>
+      <input id="submit" type="submit" value="Criar Task" />
+    </form>
+  </section>
+
+  <section class="centro">
+    <img class="seta-esquerda setaed" src="/images/arrows.png" alt="" />
+    <div class="meio carrossel">
+      <div class="container-slide">
+        <div class="add">
+          <h1>A fazer</h1>
+          <img id="btnadd" src="/images/adicionar.png" alt="" />
+        </div>
+        <div id="afazer" class="tasks"></div>
+      </div>
+
+      <div class="container">
+        <h1>Em andamento</h1>
+        <div id="andamento" class="tasks"></div>
+      </div>
+
+      <div class="container">
+        <h1>Feito</h1>
+        <div id="feito" class="tasks"></div>
+      </div>
+    </div>
+    <img class="seta-direita setaed" src="/images/arrows.png" alt="" />
+  </section>
+
+  <script src="scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="slider.js"></script>
 </body>
 
 </html>
